@@ -1,0 +1,43 @@
+
+<div><button class="salir" (click)="salir()" mat-button> Salir</button></div>
+<div class="video-background">
+  <video autoplay muted loop playsinline class="custom-video">
+    <source src="./assets/jh.mp4" type="video/mp4" />
+    Tu navegador no soporta videos HTML5.
+  </video>
+</div>
+
+<div class="overlay-container">
+  <div class="dedicatoria">
+    <h1>🌼 Para Ti, Mi Amor 🌼</h1>
+    <p>
+  A tu lado he aprendido que el verdadero amor no solo se siente, se demuestra.
+  Estás en cada uno de mis pensamientos, en cada suspiro lleno de esperanza.
+  No importa cuán difícil sea el día, saber que te tengo lo hace todo más llevadero.
+  Tu alegría es mi alegría, tu tristeza la cargo contigo sin pensarlo.
+  Eres esa persona con la que quiero compartir mis silencios y mis victorias.
+  En cada paso, quiero ser tu impulso, tu refugio y tu tranquilidad.
+  Cuando dudes, te recordaré lo valiosa que eres; cuando caigas, te ayudaré a levantarte.
+  Mi amor no exige, acompaña; no juzga, abraza; no limita, impulsa.
+  Juntos no solo soñamos, construimos.
+  Gracias por ser tú, y por permitirme amarte con todo lo que soy.
+</p>
+
+  </div>
+
+
+</div>
+
+<div class="imagenes-scroll">
+  <!-- <img src="./assets/image27.jpg" alt="Flor amarilla" width="100px" height="400px" /> -->
+    <img
+    *ngFor="let img of imagenes"
+    [src]="'assets/image' + img.id + '.jpg'"
+    [id]="'image' + img.id"
+
+    alt="Flor amarilla {{ img.id }}"
+    (click)="mostrarMensaje(img.id)"
+    class="flor-img"
+  />
+
+</div>

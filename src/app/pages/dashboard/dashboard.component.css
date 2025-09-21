@@ -1,0 +1,111 @@
+/* Video fijo de fondo */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.custom-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contenedor principal encima del video */
+.overlay-container {
+  position: relative;
+  margin-top: 30px; /* para que no tape el video fijo */
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255 255 224 / 0.8); /* amarillo claro semi-transparente */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dedicatoria arriba */
+.dedicatoria {
+  text-align: center;
+  flex: 0 0 auto;
+  color: #b8860b; /* oro oscuro */
+  margin-bottom: 15px;
+}
+
+.dedicatoria h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.dedicatoria p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* Contenedor scroll para imágenes */
+.imagenes-scroll {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  border-top: 1px solid #b8860b;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.imagenes-scroll img {
+  width: 40%;
+
+  align-self: center;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(184,134,11,0.6);
+}
+
+/* Scroll suave en móvil */
+.imagenes-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.imagenes-scroll::-webkit-scrollbar-thumb {
+  background-color: #b8860b;
+  border-radius: 3px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 480px) {
+  .overlay-container {
+    max-width: 70%;
+
+    padding: 15px;
+  }
+
+  .dedicatoria h1 {
+    font-size: 1.4rem;
+  }
+
+  .dedicatoria p {
+    font-size: 1rem;
+  }
+
+  .imagenes-scroll img {
+    width: 150px;
+  }
+}
+
+
+.salir{
+  background-color: #b8170b;
+  color: aliceblue !important;
+}
+
+.salir:hover{
+  background-color: #2b0bb8;
+  color: aliceblue !important;
+}
